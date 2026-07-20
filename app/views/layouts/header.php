@@ -305,7 +305,7 @@
             <div class="flex items-center justify-between">
                 <!-- Logo clickeable -->
                 <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                    <img src="/public/img/logos/logo_fundacion.jpg" alt="Logo Fundación DU" class="logo-header">
+                    <img src="/public/img/logos/logo_fundacion.png" alt="Logo Fundación DU" class="logo-header">
                     <span class="logo-text hidden md:block">Fundación DU</span>
                 </a>
 
