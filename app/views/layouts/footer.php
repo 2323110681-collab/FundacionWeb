@@ -3,7 +3,7 @@
     <!-- ========================================== -->
     <!-- FOOTER -->
     <!-- ========================================== -->
-    <footer class="bg-[#0F2C59] text-white pt-12 pb-6 mt-12">
+    <footer class="bg-[#0F2C59] text-white pt-12 pb-6 mt-auto">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <!-- Izquierda: Copyright y enlaces legales -->
@@ -41,6 +41,5 @@
     </footer>
 
     <!-- Scripts (solo los que no están en el header) -->
-    <!-- El script del menú ya está en header.php -->
 </body>
 </html>
