@@ -311,10 +311,7 @@
 
                 <!-- Enlaces de navegación (Desktop) -->
                 <div class="hidden lg:flex items-center space-x-1">
-                    <a href="/" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'home' ? 'active' : ''; ?>">
-                        Inicio
-                    </a>
-
+                
                     <div class="relative group">
                         <button class="nav-link dropdown-btn px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 <?php echo in_array($currentPage, ['nosotros', 'mensaje-presidente']) ? 'active' : ''; ?>">
                             La Fundación
