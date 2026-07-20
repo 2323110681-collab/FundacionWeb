@@ -9,6 +9,13 @@ RUN apt-get update && apt-get install -y \
 # Habilita mod_rewrite para URLs amigables
 RUN a2enmod rewrite
 
+# CONFIGURACIÓN CRÍTICA: Permitir que Apache use .htaccess
+RUN echo '<Directory /var/www/html/>' >> /etc/apache2/apache2.conf && \
+    echo '    Options Indexes FollowSymLinks' >> /etc/apache2/apache2.conf && \
+    echo '    AllowOverride All' >> /etc/apache2/apache2.conf && \
+    echo '    Require all granted' >> /etc/apache2/apache2.conf && \
+    echo '</Directory>' >> /etc/apache2/apache2.conf
+
 # Configura el DocumentRoot
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html|' /etc/apache2/sites-available/000-default.conf
 
