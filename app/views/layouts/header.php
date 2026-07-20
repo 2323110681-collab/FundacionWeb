@@ -259,24 +259,23 @@
     </style>
 </head>
 <body>
-    <!-- ========================================== -->
-    <!-- HEADER / NAVBAR - FONDO BLANCO -->
-    <!-- ========================================== -->
     <header class="header-white fixed w-full top-0 z-50">
         <nav class="container mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
                 <!-- Logo clickeable -->
-                <a href="/FundacionWeb/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-                    <img src="/FundacionWeb/public/img/logos/logo_fundacion.jpg" alt="Logo Fundación DU" class="logo-header">
+                <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <img src="/public/img/logos/logo_fundacion.jpg" alt="Logo Fundación DU" class="logo-header">
                     <span class="logo-text hidden md:block">Fundación DU</span>
                 </a>
 
-                <!-- Enlaces de navegación (Desktop) -->
-                <div class="hidden lg:flex items-center space-x-1">
-                    <!-- INICIO -->
-                    <a href="/FundacionWeb/" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'home' ? 'active' : ''; ?>">
-                        Inicio
-                    </a>
+                <!-- Enlaces de navegación -->
+                <a href="/" class="nav-link ...">Inicio</a>
+                <a href="/nosotros" class="nav-link ...">Nosotros</a>
+                <a href="/mensaje-presidente" class="nav-link ...">Mensaje del Presidente</a>
+                <a href="/publicaciones" class="nav-link ...">Publicaciones</a>
+                <a href="/blog" class="nav-link ...">Blog</a>
+                <a href="/agenda" class="nav-link ...">Agenda</a>
+                <a href="/contacto" class="nav-link ...">Contacto</a>
 
                     <!-- LA FUNDACIÓN (Dropdown) -->
                     <div class="relative group">
