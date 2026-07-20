@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f8fafc;
+    color: #1a202c;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #FF7A00;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    transform-origin: top center;
+    border: 1px solid rgba(15, 44, 89, 0.08);
+}
+
+@media (min-width: 1024px) {
+    .group:hover .dropdown-menu {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
+
+/* ==========================================
+   HERO
+   ========================================== */
+.hero-section {
+    background: linear-gradient(135deg, #0F2C59 0%, #1a3d6e 100%);
+}
+
+/* ==========================================
+   ANIMACIONES
+   ========================================== */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   SOCIAL LINKS
+   ========================================== */
+.social-link {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
