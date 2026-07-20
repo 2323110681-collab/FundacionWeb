@@ -1,1 +1,14 @@
-
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Si la solicitud no es para un archivo o directorio existente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Redirige a index.php con el parámetro page
+    RewriteRule ^([a-zA-Z0-9-]+)/?$ index.php?page=$1 [L,QSA]
+    
+    # Para URLs con acción (ej: /nosotros/mensaje)
+    RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ index.php?page=$1&action=$2 [L,QSA]
+</IfModule>
