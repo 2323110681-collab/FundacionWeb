@@ -28,8 +28,6 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: #f8fafc;
             color: #1a202c;
-            padding-top: 0;
-            margin-top: 0;
         }
 
         /* HEADER - FONDO BLANCO */
@@ -233,17 +231,16 @@
             }
         }
 
-        /* Main - eliminar espacio extra */
+        /* Asegurar que el main ocupe todo el espacio */
         main {
-            padding-top: 0;
-            margin-top: 0;
+            padding-top: 80px;
+            flex: 1;
         }
     </style>
 
     <script>
         // ==========================================
         // NAVBAR - MENÚ MÓVIL Y DROPDOWNS
-        // (Cargado al inicio para que funcione en móviles)
         // ==========================================
         document.addEventListener('DOMContentLoaded', function() {
             // Menú móvil
@@ -299,7 +296,7 @@
         });
     </script>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
     <!-- ========================================== -->
     <!-- HEADER / NAVBAR - FONDO BLANCO -->
     <!-- ========================================== -->
@@ -314,12 +311,10 @@
 
                 <!-- Enlaces de navegación (Desktop) -->
                 <div class="hidden lg:flex items-center space-x-1">
-                    <!-- INICIO -->
                     <a href="/" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'home' ? 'active' : ''; ?>">
                         Inicio
                     </a>
 
-                    <!-- LA FUNDACIÓN (Dropdown) -->
                     <div class="relative group">
                         <button class="nav-link dropdown-btn px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 <?php echo in_array($currentPage, ['nosotros', 'mensaje-presidente']) ? 'active' : ''; ?>">
                             La Fundación
@@ -337,22 +332,15 @@
                         </div>
                     </div>
 
-                    <!-- PUBLICACIONES -->
                     <a href="/publicaciones" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'publicaciones' ? 'active' : ''; ?>">
                         Publicaciones
                     </a>
-
-                    <!-- BLOG -->
                     <a href="/blog" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'blog' ? 'active' : ''; ?>">
                         Blog
                     </a>
-
-                    <!-- AGENDA -->
                     <a href="/agenda" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'agenda' ? 'active' : ''; ?>">
                         Agenda
                     </a>
-
-                    <!-- CONTACTO -->
                     <a href="/contacto" class="nav-link px-3 py-2 rounded-lg text-sm font-medium transition-all <?php echo $currentPage === 'contacto' ? 'active' : ''; ?>">
                         Contacto
                     </a>
@@ -360,7 +348,6 @@
 
                 <!-- Buscador + Menú móvil -->
                 <div class="flex items-center gap-3">
-                    <!-- Buscador -->
                     <div class="hidden md:flex items-center">
                         <input type="text" placeholder="Buscar..." class="search-input px-3 py-1.5 rounded-l-lg text-sm w-40 focus:w-48 transition-all duration-300">
                         <button class="search-btn px-3 py-1.5 rounded-r-lg">
@@ -368,7 +355,6 @@
                         </button>
                     </div>
                     
-                    <!-- Botón menú móvil -->
                     <button id="menuBtn" class="lg:hidden text-[#0F2C59] text-2xl hover:text-[#FF7A00] transition-colors">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -377,7 +363,6 @@
 
             <!-- Menú móvil -->
             <div id="mobileMenu" class="lg:hidden hidden mt-4 pb-4 space-y-2">
-                <!-- Buscador móvil -->
                 <div class="flex items-center px-2">
                     <input type="text" placeholder="Buscar..." class="search-input px-3 py-2 rounded-l-lg text-sm w-full">
                     <button class="search-btn px-3 py-2 rounded-r-lg">
@@ -404,4 +389,4 @@
         </nav>
     </header>
 
-    <main>
+    <main class="flex-1 pt-20">
