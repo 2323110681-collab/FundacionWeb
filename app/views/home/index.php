@@ -3,7 +3,7 @@
 <!-- ========================================== -->
 <section class="hero-section" style="min-height: 90vh; margin-top: 0; padding-top: 0;">
     <!-- Imagen de fondo -->
-    <img src="/public/img/fondo_fundacion.jpg" alt="Fondo Fundación DU" class="hero-bg">
+    <img src="/public/img/fondo_fundacion.jpeg" alt="Fondo Fundación DU" class="hero-bg">
     
     <!-- Botones -->
     <a href="/nosotros" class="...">Conócenos</a>
